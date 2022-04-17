@@ -1,0 +1,58 @@
+<form [formGroup]="formUser" (ngSubmit)="onSubmit()">
+
+  <h1>Cadastre-se!</h1>
+
+  <div class="form-group">
+    <label class="label-main" for="nome" #nome>Nome:</label>
+    <input class="fields" type="text" name="nome" id="nome" [disabled]="isDisabled()" formControlName="nome">
+  </div>
+
+  <div class="form-group">
+    <label class="label-main" for="estado">Estado:</label>
+    <select class="fields" name="estado" id="estado" formControlName="estado">
+      <option *ngFor="let estado of estados" [value]="estado">{{ estado }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="label-main" for="dataNascimento">Data de nascimento:</label>
+    <input class="fields" type="date" [disabled]="isDisabled()" name="dataNascimento" id="dataNascimento" formControlName="dataNascimento">
+  </div>
+
+  <div class="form-group">
+    <label class="label-main" for="email">E-mail:</label>
+    <input class="fields" type="email" name="email" [disabled]="isDisabled()" id="email" formControlName="email">
+  </div>
+
+  <div class="form-group">
+    <label class="label-main" for="password">Senha:</label>
+    <input class="fields" type="password" name="password" [disabled]="isDisabled()" id="password" formControlName="senha">
+  </div>
+
+  <div class="form-group">
+    <label class="label-main" for="age">Idade:</label>
+    <input class="fields" type="number" name="age" [disabled]="isDisabled()" id="age" min="1" max="100" formControlName="idade">
+  </div>
+
+  <div class="form-group">
+    <label class="label-main">Selecione seu esporte favorito:</label>
+
+    <div class="content-sports" name="esporte" id="esporte" formControlName="esporte">
+      <label *ngFor="let esporte of esportes">
+        <input
+          type="checkbox"
+          [value]="esporte.id"
+          [checked]="esporte.checked"
+          (change)="onChangeEsporte($event)"
+        >
+        {{ esporte.name }}
+      </label>
+
+    </div>
+
+  </div>
+
+  <input type="button" class="btn btn-primary mt-4" value="Editar">
+  <input type="submit" class="btn btn-primary mt-4" value="Salvar">
+
+</form>

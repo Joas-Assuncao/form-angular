@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+
+  font-family: 'Roboto', sans-serif;
+
+  box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+
+}
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
+
+  padding: 1rem 3rem;
+
+  margin-bottom: 5rem;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+@media(max-width: 800px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media(max-width: 450px) {
+  html {
+    font-size: 87.5%;
+  }
+}

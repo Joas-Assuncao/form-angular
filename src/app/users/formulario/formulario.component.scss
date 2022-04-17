@@ -1,0 +1,58 @@
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
+
+  text-align: left;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+
+    .label-main {
+      font-weight: 500;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      margin-bottom: .5rem;
+    }
+
+    .fields {
+      padding: .5rem;
+
+      font-size: 1rem;
+    }
+
+    .content-sports {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+
+      gap: .5rem;
+
+      label input {
+        margin-right: .7rem;
+      }
+    }
+  }
+
+  .btn {
+    width: 20rem;
+
+    color: #f2f2f2;
+    background: #2E7AFA;
+
+    padding: .6rem 0;
+    margin: 1rem 0;
+
+    font-size: 1rem;
+
+    border: none;
+
+    cursor: pointer;
+  }
+}
